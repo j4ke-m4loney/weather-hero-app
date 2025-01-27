@@ -1,0 +1,50 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background: linear-gradient(to bottom, #FFD194, #FFB347);
+  /* Default sunny background */
+  color: #333333;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Container Styling */
+header,
+main,
+footer {
+  width: 90%;
+  max-width: 800px;
+  margin: 20px auto;
+}
+
+/* Header Section */
+
+header {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+h1 {
+  font-size: 2.5rem;
+}
+
+.tagline {
+  font-style: italic;
+  margin-top: 20px;
+}
+
+/* Search Bar */
+
+.search-container {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 20px;
+}
