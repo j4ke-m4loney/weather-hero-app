@@ -16,12 +16,23 @@ body {
 }
 
 /* Container Styling */
-header,
-main,
+header {
+  width: 90%;
+  max-width: 800px;
+  margin: 20px auto;
+}
+
+main {
+  width: 90%;
+  max-width: 800px;
+  margin: 20px auto;
+}
+
 footer {
   width: 90%;
   max-width: 800px;
-  margin: 100px auto;
+  margin-top: 100px;
+
 }
 
 /* Header Section */
