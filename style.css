@@ -119,6 +119,28 @@ button:hover {
   margin-bottom: 20px;
 }
 
+#current-weather h2 {
+  font-size: 1.5rem;
+  margin-bottom: 15px;
+}
+
+.weather-info {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.icon-temp {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 2rem;
+}
+
+.details {
+  font-size: 1rem;
+  color: #555;
+}
 
 /* Responsive Design */
 
