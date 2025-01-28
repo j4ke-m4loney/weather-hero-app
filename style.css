@@ -44,7 +44,7 @@ h1 {
   bottom: 200px;
   /* Adjust to move below the title */
   left: 50%;
-  transform: translateX(90%) translateY(100%) rotate(-5deg);
+  transform: translateX(90%) translateY(200%) rotate(-5deg);
   font-size: 1rem;
   font-style: italic;
   color: #333333;
@@ -84,5 +84,43 @@ input[type="text"] {
 }
 
 .search-button {
-  background-color: #EB912B;
+  background-color: #333333;
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+button:hover {
+  background-color: black;
+  transform: scale(1.05);
+}
+
+/* Current Weather  */
+
+#current-weather {
+  background-color: white;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  margin-bottom: 20px;
+}
+
+
+/* Responsive Design */
+
+@media(max-width: 640px) {
+  .title-comment {
+    transform: translateX(30%) translateY(100%) rotate(-5deg);
+    /* border: 2px solid black; */
+  }
+}
+
+@media(max-width: 740px) {
+  .title-comment {
+    transform: translateX(20%) translateY(100%) rotate(-5deg);
+    /* border: 2px solid black; */
+  }
 }
