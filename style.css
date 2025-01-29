@@ -164,7 +164,32 @@ button:hover {
   font-style: italic;
 }
 
+/* 5 day forecaset */
 
+#forecast {
+  text-align: center;
+
+}
+
+#forecast h2 {
+  font-size: 1.5rem;
+  margin-bottom: 15px;
+}
+
+.forecast-container {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+}
+
+.forecast-card {
+  background: white;
+  padding: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  font-size: 0.9rem;
+  width: 160px;
+  text-align: center;
+}
 
 /* Responsive Design */
 
