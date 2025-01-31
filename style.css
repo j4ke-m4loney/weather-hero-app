@@ -191,7 +191,7 @@ button:hover {
   text-align: center;
 }
 
-/* Responsive Design */
+/* Responsive Design Elements added*/
 
 @media(max-width: 640px) {
   .title-comment {
