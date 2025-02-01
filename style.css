@@ -204,7 +204,12 @@ button:hover {
 @media(max-width: 640px) {
   .title-comment {
     transform: translateX(30%) translateY(100%) rotate(-5deg);
+    font-size: 1rem;
     /* border: 2px solid black; */
+  }
+
+  h1 {
+    font-size: 3rem;
   }
 }
 
