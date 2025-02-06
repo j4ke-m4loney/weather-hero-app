@@ -14,7 +14,6 @@ async function fetchWeather(city) {
 
   const BASE_URL = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${API_KEY}&units=metric`
 
-
   try {
     const response = await fetch(BASE_URL);
     const data = await response.json();
@@ -32,19 +31,16 @@ async function fetchWeather(city) {
 // Function to Update UR with Weather Data
 function updateWeatherUI(data) {
   weatherDetails.innerText = `${data.weather[0].main} | Humidity: ${data.main.humidity}% | Wind ${data.wind.speed} km/h`
-  // weatherIcon.innerText
-
-  console.log("Weather Data Received:", data); // Log full API response
-  console.log("Weather Condition:", data.weather[0].main);
-  console.log("Humidity:", data.main.humidity);
-  console.log("Wind Speed:", data.wind.speed);
+  temperature.innerText = `${Math.round(data.main.temp)}°C`;
 }
 
 
 
 // Event Listener for Search button
 searchBtn.addEventListener("click", () => {
+
   const city = cityInput.value.trim();
+
   if (city) {
     fetchWeather(city);
   } else {
