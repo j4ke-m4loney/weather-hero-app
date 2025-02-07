@@ -47,7 +47,6 @@ async function fetchForecast(city) {
   }
 }
 
-
 // Function to Update UI with Weather Data
 function updateWeatherUI(data) {
   weatherDetails.innerText = `${data.weather[0].main} | Humidity: ${data.main.humidity}% | Wind ${data.wind.speed} km/h`
@@ -88,10 +87,59 @@ function generateWeatherChallenge(condition) {
 
   const challengeList = challenges[condition] || ["Be the hero and embrace today's weather! 🌍"];
 
-  // Randomly selects a challenge by choosing a random number between 1-3 then mulitplies that number challengeList.length and rounds 
+  // Randomly selects a challenge by choosing a random number between 1-3 then multiplies that number challengeList.length and rounds 
   const randomChallenge = challengeList[Math.floor(Math.random() * challengeList.length)];
 
   challengeText.innerText = randomChallenge;
+}
+
+// Function to update the 5 day weather forecast 
+function updateForecastUI(data) {
+
+  console.log("✅ updateForecastUI is being called!"); // 🔍 Check if function runs
+  console.log("API Forecast Data:", data); // 🔍 Log entire API response
+
+
+  forecastContainer.innerHTML = ""; // Clear previous forecast 
+
+  const dailyForecasts = {}; // Object to store on forecast per day
+
+  // Loop through the forecast list (API gives data every 3 hours)
+  data.list.forEach((forecast) => {
+    const date = forecast.dt_txt.split(" ")[0]; // Extract YYYY-MM-DD
+
+    // Store only ONE forecast per day (first occurrence)
+    if (!dailyForecasts[date]) {
+      dailyForecasts[date] = {
+        temp: Math.round(forecast.main.temp), // Round the temperature 
+        weather: forecast.weather[0].main, // Weather Description 
+        icon: getWeatherEmoji(forecast.weather[0].main), // Get weather Emoji
+      };
+    }
+  });
+
+  // Convert object to an array and display 5 day forecast 
+  Object.keys(dailyForecasts).slice(0, 5).forEach((date, index) => {
+    const { temp, weather, icon } = dailyForecasts[date];
+
+    // Create a new forecast card
+    const forecastCard = document.createElement("div");
+    forecastCard.classList.add("forecast-card");
+
+    // Get the day of the week (Mon, Tues, Wed etc...)
+    const dayOfWeek = new Date(date).toLocaleDateString("en-US", { weekday: "short" });
+
+    // Set the forecast content 
+    forecastCard.innerHTML = `${dayOfWeek} ${icon} ${temp}°C`;
+
+    console.log("Adding forecast:", forecastCard.innerHTML); // ✅ Debugging log
+
+
+    // Append the card to the forecast container
+    forecastContainer.appendChild(forecastCard);
+
+  })
+
 }
 
 
@@ -102,7 +150,11 @@ searchBtn.addEventListener("click", () => {
 
   if (city) {
     fetchWeather(city);
+    fetchForecast(city);
   } else {
     alert("Please center a city name.")
   }
-})
+});
+
+
+
