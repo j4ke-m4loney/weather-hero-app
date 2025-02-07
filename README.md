@@ -2,9 +2,9 @@
 
 I created a fun weather app that spits out a challenges based on what the weather is in your city. 
 
-![WeatherHero from page](/images/WeatherHero Screenshot.png)
+![WeatherHero from page](/images/WeatherHero-Screenshot.png)
 
-Live version of the [WeatherHero is here]([https://what-bro-are-you-quiz.netlify.app/](https://weather-hero-daily-challenge.netlify.app/))
+Live version of the [WeatherHero is here](https://weather-hero-daily-challenge.netlify.app/)
 
 ## Features  
 - **Real-time Weather**: Get the latest weather updates for any city worldwide.  
