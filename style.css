@@ -230,7 +230,7 @@ footer {
   }
 
   .title-comment {
-    transform: translateX(5%) translateY(65%) rotate(-5deg);
+    transform: translateX(5%) translateY(90%) rotate(-5deg);
     /* ✅ Lowered for Mobile */
     font-size: 0.9rem;
   }
