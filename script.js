@@ -132,9 +132,6 @@ function updateForecastUI(data) {
     // Set the forecast content 
     forecastCard.innerHTML = `${dayOfWeek} ${icon} ${temp}°C`;
 
-    console.log("Adding forecast:", forecastCard.innerHTML); // ✅ Debugging log
-
-
     // Append the card to the forecast container
     forecastContainer.appendChild(forecastCard);
 

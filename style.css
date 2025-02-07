@@ -4,15 +4,22 @@
   box-sizing: border-box;
 }
 
+html,
+body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+}
+
 body {
   font-family: 'Poppins', sans-serif;
-  background: linear-gradient(to bottom, #FFD194, #FFB347);
+  background-color: #FFB347;
+  /* background: linear-gradient(to bottom, #FFD194, #FFB347); */
   /* Default sunny background */
   color: #333333;
   min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
 }
 
 /* Container Styling */
@@ -23,16 +30,10 @@ header {
 }
 
 main {
+  flex: 1;
   width: 90%;
   max-width: 800px;
   margin: 20px auto;
-}
-
-footer {
-  width: 90%;
-  max-width: 800px;
-  margin-top: 100px;
-
 }
 
 /* Header Section */
@@ -42,6 +43,7 @@ header {
   margin-bottom: 30px;
   position: relative;
   text-align: center;
+  padding-top: 80px;
 }
 
 h1 {
@@ -199,23 +201,91 @@ button:hover {
   margin: 10px;
 }
 
+footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  background-color: white;
+  text-align: center;
+  padding: 15px;
+  position: relative;
+}
+
 /* Responsive Design Elements added*/
 
-@media(max-width: 640px) {
+@media (max-width: 640px) {
+
+  /* 📱 Mobile Screens */
+  .forecast-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+  }
+
+  .forecast-card {
+    width: 90%;
+    max-width: 300px;
+  }
+
   .title-comment {
-    transform: translateX(30%) translateY(100%) rotate(-5deg);
-    font-size: 1rem;
-    /* border: 2px solid black; */
+    transform: translateX(5%) translateY(130%) rotate(-5deg);
+    /* ✅ Lowered for Mobile */
+    font-size: 0.9rem;
   }
 
   h1 {
-    font-size: 3rem;
+    font-size: 3.2rem;
+    padding-top: 35px;
+  }
+
+  .details {
+    font-size: 0.9rem;
+  }
+
+}
+
+@media (min-width: 641px) and (max-width: 1024px) {
+
+  /* 📊 Medium Screens (Tablets & Small Laptops) */
+  .forecast-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+  }
+
+  .forecast-card {
+    width: 90%;
+    max-width: 300px;
+  }
+
+  .title-comment {
+    transform: translateX(10%) translateY(200%) rotate(-5deg);
+    /* ✅ Balanced for Tablets */
+    font-size: 1rem;
   }
 }
 
-@media(max-width: 740px) {
+@media (min-width: 1025px) {
+
+  /* 🖥 Large Screens (Laptops & Desktops) */
+  .forecast-container {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 15px;
+    justify-content: center;
+  }
+
+  .forecast-card {
+    width: 100%;
+    max-width: 280px;
+  }
+
   .title-comment {
-    transform: translateX(20%) translateY(100%) rotate(-5deg);
-    /* border: 2px solid black; */
+    transform: translateX(15%) translateY(200%) rotate(-5deg);
+    /* ✅ Fixed for Large Screens */
+    font-size: 1.2rem;
   }
 }
