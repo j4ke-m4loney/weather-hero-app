@@ -1,8 +1,8 @@
 # Weather Hero 🌦️⚡
 
-I created a fun weather app that spits out a challenges based on what the weather is in your city. 
+I created a fun weather app that uses the OpenWeather API to fetch live weather data and generate a challenge based on the weather in your city. 
 
-![WeatherHero from page](/images/WeatherHero-Screenshot.png)
+![WeatherHero from page](images/weatherhero-screenshot.png)
 
 Live version of the [WeatherHero is here](https://weather-hero-daily-challenge.netlify.app/)
 
