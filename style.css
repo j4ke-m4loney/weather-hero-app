@@ -212,7 +212,7 @@ footer {
   position: relative;
 }
 
-/* Responsive Design Elements added*/
+/* Responsive Design Elements - set for 3 screen sizes */
 
 @media (max-width: 640px) {
 
