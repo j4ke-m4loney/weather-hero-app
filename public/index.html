@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Weather Hero</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&family=Roboto:wght@300;400&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="/style.css">
+  <script src="/script.js" defer></script>
+</head>
+
+<body>
+  <!-- Header -->
+  <header>
+    <h1>Weather Hero</h1>
+    <span class="title-comment">"rain, hail or shine "<span class="emoji">🤨</span></span>
+    <p class="tagline">Weather made fun, one challenge at a time.</p>
+    <div class="search-container">
+      <input type="text" id="cityInput" placeholder="Enter your city...">
+      <button class="search-button" id="searchBtn">Search 🔍</button>
+    </div>
+  </header>
+
+  <!-- Main section -->
+  <main>
+    <!-- Current Section -->
+    <section id="current-weather">
+      <h2>Current Weather</h2>
+      <div class="weather-info">
+        <div class="icon-temp">
+          <span class="icon">🌤️</span>
+          <span class="temp">22°C</span>
+        </div>
+        <p class="details">Sunny | Humidity: 40% | Wind: 10 km/h</p>
+      </div>
+    </section>
+
+
+    <!-- Daily Challenge -->
+    <section id="daily-challenge">
+      <h2>Today's Challenge 🌟</h2>
+      <p id="challenge-text">Take a walk and soak up the sun!</p>
+    </section>
+
+    <!-- 5 Day Forecast  -->
+    <section id="forecast">
+      <h2>5-Day Forecast</h2>
+      <div class="forecast-container">
+        <div class="forecast-card">Mon 🌤️ 22°C</div>
+        <div class="forecast-card">Tue 🌧️ 20°C</div>
+        <div class="forecast-card">Wed 🌩️ 18°C</div>
+        <div class="forecast-card">Thu ☁️ 21°C</div>
+        <div class="forecast-card">Fri ☀️ 25°C</div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer>
+    <p>© 2025 WeatherHero 🌟 by Jake Maloney</p>
+  </footer>
+</body>
+
+</html>

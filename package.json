@@ -1,0 +1,16 @@
+{
+  "name": "weather-hero-app",
+  "version": "1.0.0",
+  "description": "I created a fun weather app that uses the OpenWeather API to fetch live weather data and generate a challenge based on the weather in your city.",
+  "main": "script.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "dotenv": "^16.4.7",
+    "express": "^4.21.2"
+  }
+}
