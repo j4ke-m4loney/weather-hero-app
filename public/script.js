@@ -8,7 +8,7 @@ const challengeText = document.getElementById("challenge-text");
 const forecastContainer = document.querySelector(".forecast-container");
 
 async function getApiKey() {
-  const response = await fetch('/api-key');
+  const response = await fetch('/.netlify/functions/getApiKey');
   const data = await response.json();
   return data.apiKey;
 }
