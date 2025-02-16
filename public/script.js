@@ -15,8 +15,11 @@ async function getApiKey() {
 
 // This function will fetch the weather
 async function fetchWeather(city) {
-  const API_KEY = await getApiKey(); // Fetches API key from server
-  const BASE_URL = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${API_KEY}&units=metric`
+  const API_KEY = await getApiKey();
+  const BASE_URL = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${API_KEY}&units=metric`;
+
+  const tagline = document.querySelector('.tagline'); // Grab tagline element
+  tagline.innerText = 'Loading...'; // Show loading text
 
   try {
     const response = await fetch(BASE_URL);
@@ -25,17 +28,23 @@ async function fetchWeather(city) {
     if (data.cod === 200) {
       updateWeatherUI(data);
     } else {
-      alert("City not found. Please enter another one.")
+      alert("City not found. Please enter another one.");
     }
   } catch (error) {
     console.error("Error fetching weather!", error);
+  } finally {
+    tagline.innerText = 'Weather made fun, one challenge at a time.'; // Reset text after loading
   }
 }
+
 
 // Function to collect 5 day Forecast 
 async function fetchForecast(city) {
   const API_KEY = await getApiKey();
   const FORECAST_URL = `https://api.openweathermap.org/data/2.5/forecast?q=${city}&appid=${API_KEY}&units=metric`;
+
+  const tagline = document.querySelector('.tagline'); 
+  tagline.innerText = 'Loading...';
 
   try {
     const response = await fetch(FORECAST_URL);
@@ -48,6 +57,8 @@ async function fetchForecast(city) {
     }
   } catch (error) {
     console.error("Error fetching forecast!", error);
+  } finally {
+    tagline.innerText = 'Weather made fun, one challenge at a time.';
   }
 }
 
