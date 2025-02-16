@@ -157,5 +157,12 @@ searchBtn.addEventListener("click", () => {
   }
 });
 
+// Event listener for the Enter key on the input field
+cityInput.addEventListener("keypress", function (event) {
+  if (event.key === "Enter") {
+    event.preventDefault(); // Prevent form submission
+    searchBtn.click(); // Trigger the search button click
+  }
+});
 
 
