@@ -7,6 +7,7 @@ const weatherDetails = document.querySelector(".details");
 const challengeText = document.getElementById("challenge-text");
 const forecastContainer = document.querySelector(".forecast-container");
 
+// Fetch API Key from Netlify Function
 async function getApiKey() {
   const response = await fetch('/.netlify/functions/getApiKey');
   const data = await response.json();
