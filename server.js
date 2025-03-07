@@ -12,7 +12,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 app.get('/', (req, res) => {
   res.sendFile(path.join(__dirname, 'public', 'index.html'));
 });
-
+// Serve the index.html when accessing the root URL
 app.get('/api-key', (req, res) => {
   res.json({ apiKey: process.env.API_KEY });
 });
