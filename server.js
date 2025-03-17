@@ -2,7 +2,7 @@ const express = require('express');
 const dotenv = require('dotenv');
 const path = require('path');
 
-dotenv.config();
+dotenv.config(); // Load the environment variables from the .env file
 const app = express();
 
 // Serve static files from the "public" folder
